@@ -1,10 +1,18 @@
 import React from 'react'
+
 import { NextPage } from 'next'
+
+import Button from '@mui/material/Button';
+
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const HomePage: NextPage = () => {
   return (
     <React.Fragment>
-      <h1> Hello world! </h1>
+      <Navbar/>
+      <Button variant="contained">Hello World</Button>
+      <Footer/>
     </React.Fragment>
   )
 }

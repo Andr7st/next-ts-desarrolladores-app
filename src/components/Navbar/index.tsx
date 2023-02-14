@@ -12,9 +12,24 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { SxProps, Theme } from '@mui/material';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['DevLangs', 'Frontend', 'Backend'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const buttonCss: SxProps<Theme> = {
+  display: 'block',
+  color: 'inherit',
+  textTransform: 'none',
+  background: 'rgba(61, 61, 61, 0.8)',
+  boxShadow: 'none',
+  minWidth:'78px',
+  margin: '0 1px',
+  my: 1, 
+  '&:hover': {
+    bgcolor: "#340877",
+  },
+};
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -44,7 +59,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            // href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -118,7 +133,8 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+               // sx={{ my: 2, color: 'white', display: 'block' }}
+               sx={buttonCss}
               >
                 {page}
               </Button>
@@ -128,7 +144,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/next.svg" />
+                <Avatar alt="Remy Sharp" src="/assets/main_logo.svg" />
               </IconButton>
             </Tooltip>
             <Menu

@@ -5,6 +5,7 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import { Typography, TextField } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 function Copyright() {
   return (
@@ -19,12 +20,12 @@ function Copyright() {
 }
 
 const iconStyle = {
-  width: 48,
-  height: 48,
+  width: 64,
+  height: 64,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: "#757575", // 'warning.main',
+  backgroundColor: "rgba(38, 38, 38, 0.7)", // 'warning.main',
   mr: 1,
   '&:hover': {
     bgcolor: "#212121", //'warning.dark',
@@ -62,11 +63,11 @@ export default function AppFooter() {
               sx={{ height: 120 }}
             >
               <Grid item sx={{ display: 'flex' }}>
-                <Box component="a" href="https://github.com/Andr7st" sx={iconStyle}>
-                  <GitHubIcon />
+                <Box component="a" href="https://github.com/Andr7st" target="_blank" sx={iconStyle}>
+                  <GitHubIcon sx={{ color: 'white' }}/>
                 </Box>
-                <Box component="a" href="https://github.com/Andr7st" sx={iconStyle}>
-                  <GitHubIcon />
+                <Box component="a" href="https://youtube.com/playlist?list=PLOFb_1cEz-dEUZGo0oaQdTnAtymx72cdq" target="_blank" sx={iconStyle}>
+                  <YouTubeIcon sx={{ color:'red', height: 32, width: 64 }} />
                 </Box>
               </Grid>
               <Grid item>
@@ -109,9 +110,9 @@ export default function AppFooter() {
           </Grid>
           <Grid item>
             <Typography variant="caption">
-              {'Icons made by '}
+              {'made by '}
               <Link href="https://github.com/Andr7st" rel="sponsored" title="Freepik">
-                Andr7st
+                { 'Andr7st' }
               </Link>
               {' from '}
               <Link href="https://github.com/Andr7st" rel="sponsored" title="Flaticon">
@@ -124,7 +125,7 @@ export default function AppFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                CC 3.0 BY
+                developer.
               </Link>
             </Typography>
           </Grid>

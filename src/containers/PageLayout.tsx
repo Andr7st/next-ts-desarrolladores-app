@@ -21,6 +21,28 @@ const PageLayout : FC<Props> = ( { seoProps, children} ) => (
     <NextSeo
       title={seoProps?.title || 'title' } 
       description={seoProps?.description || 'description' }
+      // test
+      openGraph={{
+        type: 'website',
+        url: 'https://desarrolladores.vercel.app/',
+        title: 'desarrolladores',
+        description: 'desarrolladores.app',
+        images: [
+          {
+            url: 'https://raw.githubusercontent.com/Andr7st/index/main/readme-resources/social/grupo-desarrolladores--og.png',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+          {
+            url: 'https://raw.githubusercontent.com/Andr7st/index/main/readme-resources/social/grupo-desarrolladores--og.png',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt 2',
+          },
+        ],
+      }}
+
       />
     <Navbar/>
     <Container component="main" maxWidth="xl"  sx={ mainCss }>      

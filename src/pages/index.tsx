@@ -68,7 +68,7 @@ const tiers = [
   {
     title: 'Full Stack',
     price: '21',
-    description: [
+    description: [ // Representational State Transfers  REST
       'Is Back and Front.',
       'greater knowledge',
       'great work capacity',
